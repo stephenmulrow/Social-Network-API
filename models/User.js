@@ -12,7 +12,7 @@ const userSchema = new Schema(
       type: String,
       required: true, 
       unique: true,
-      match: 
+      match: true
     },
     thougts: [{
       
@@ -22,3 +22,7 @@ const userSchema = new Schema(
     }]
   }
 )
+
+const User = model('user', userSchema)
+
+module.exports = User;
